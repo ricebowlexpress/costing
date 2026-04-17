@@ -181,6 +181,7 @@ h1 {
 
 .prefix {
   left: 16px;
+  min-width: 24px;
 }
 
 .suffix {
@@ -188,7 +189,7 @@ h1 {
 }
 
 .input-wrap input {
-  padding-left: 34px;
+  padding-left: 54px;
   padding-right: 44px;
 }
 
