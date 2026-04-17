@@ -21,9 +21,8 @@ body {
   font-family: "Source Sans 3", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(244, 162, 97, 0.35), transparent 26%),
-    radial-gradient(circle at bottom right, rgba(63, 97, 45, 0.22), transparent 30%),
-    linear-gradient(135deg, #f7f1e1 0%, #ece5d8 100%);
+    linear-gradient(rgba(121, 15, 8, 0.34), rgba(121, 15, 8, 0.34)),
+    url("file:///Z:/Photo/background.jpeg") center / cover fixed no-repeat;
 }
 
 .page-shell {
@@ -54,6 +53,13 @@ body {
   padding: 36px;
 }
 
+.brand-title {
+  display: block;
+  width: min(100%, 420px);
+  margin: 0 0 18px;
+  filter: drop-shadow(0 10px 22px rgba(77, 10, 6, 0.18));
+}
+
 .eyebrow,
 .section-kicker,
 .panel-label {
@@ -74,7 +80,8 @@ h2 {
 
 h1 {
   font-size: clamp(2.6rem, 5vw, 4.8rem);
-  max-width: 12ch;
+  max-width: 14ch;
+  color: #fffaf0;
 }
 
 .hero-text,
@@ -89,12 +96,13 @@ h1 {
 .hero-text {
   max-width: 56ch;
   margin-top: 18px;
+  color: rgba(255, 250, 240, 0.92);
 }
 
 .hero-panel {
   padding: 28px;
   background:
-    linear-gradient(180deg, rgba(217, 93, 57, 0.08), rgba(255, 250, 240, 0.96)),
+    linear-gradient(180deg, rgba(217, 93, 57, 0.18), rgba(255, 250, 240, 0.96)),
     var(--surface-strong);
   display: flex;
   flex-direction: column;
