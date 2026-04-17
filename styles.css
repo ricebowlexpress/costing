@@ -135,6 +135,19 @@ h1 {
   font-size: 0.95rem;
 }
 
+.form-subtitle {
+  margin-top: 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--deep);
+}
+
+.hint {
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .calculator-form input,
 .calculator-form select {
   width: 100%;
