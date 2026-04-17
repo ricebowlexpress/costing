@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CostCraft | Selling Price Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Cost Calculation Website</p>
+        <h1>Start with the selling price section your business actually needs.</h1>
+        <p class="hero-text">
+          Enter your COGS and target gross profit percentage to instantly calculate
+          a suggested selling price in Malaysian Ringgit. This is the first block of a larger cost calculation site.
+        </p>
+      </div>
+      <div class="hero-panel">
+        <p class="panel-label">First calculator</p>
+        <h2>Selling Price</h2>
+        <p>Use COGS with your desired gross profit percentage to set a cleaner selling price.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="calculator-card" aria-labelledby="selling-price-title">
+        <div class="section-heading">
+          <p class="section-kicker">Section 01</p>
+          <h2 id="selling-price-title">Selling Price Calculation</h2>
+          <p>
+            Fill in your COGS and gross profit target, and the calculator updates right away.
+          </p>
+        </div>
+
+        <div class="calculator-layout">
+          <form class="calculator-form" id="price-form">
+            <label for="cogs">COGS (Cost of Goods Sold)</label>
+            <div class="input-wrap">
+              <span class="prefix">RM</span>
+              <input id="cogs" name="cogs" type="number" min="0" step="0.01" value="25">
+            </div>
+
+            <label for="gross-profit">Gross Profit Percentage</label>
+            <div class="input-wrap">
+              <input id="gross-profit" name="gross-profit" type="number" min="0" max="99.99" step="0.01" value="40">
+              <span class="suffix">%</span>
+            </div>
+          </form>
+
+          <aside class="results-panel" aria-live="polite">
+            <div class="result-card accent">
+              <p class="result-label">Suggested Selling Price</p>
+              <p class="result-value" id="selling-price">RM41.67</p>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card">
+                <p class="result-label">COGS</p>
+                <p class="result-value small" id="total-cost">RM25.00</p>
+              </div>
+
+              <div class="result-card">
+                <p class="result-label">Gross Profit Amount</p>
+                <p class="result-value small" id="profit-amount">RM16.67</p>
+              </div>
+
+              <div class="result-card">
+                <p class="result-label">Gross Profit Percentage</p>
+                <p class="result-value small" id="profit-margin">40.00%</p>
+              </div>
+
+              <div class="result-card">
+                <p class="result-label">Cost Coverage Ratio</p>
+                <p class="result-value small" id="price-with-tax">1.67x</p>
+              </div>
+            </div>
+
+            <div class="note-card" id="calculation-note">
+              This selling price is calculated so your gross profit matches the percentage you selected.
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
