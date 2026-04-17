@@ -22,7 +22,7 @@ body {
   color: var(--text);
   background:
     linear-gradient(rgba(121, 15, 8, 0.34), rgba(121, 15, 8, 0.34)),
-    url("file:///Z:/Photo/background.jpeg") center / cover fixed no-repeat;
+    url("background.jpeg") center / cover fixed no-repeat;
 }
 
 .page-shell {
