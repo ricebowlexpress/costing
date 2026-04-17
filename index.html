@@ -17,13 +17,13 @@
         <h1>Start with the selling price section your business actually needs.</h1>
         <p class="hero-text">
           Enter your COGS and target gross profit percentage to instantly calculate
-          a suggested selling price in Malaysian Ringgit. This is the first block of a larger cost calculation site.
+          a suggested selling price in Malaysian Ringgit. The website now also includes an OPEX and breakeven calculator.
         </p>
       </div>
       <div class="hero-panel">
-        <p class="panel-label">First calculator</p>
-        <h2>Selling Price</h2>
-        <p>Use COGS with your desired gross profit percentage to set a cleaner selling price.</p>
+        <p class="panel-label">Live calculators</p>
+        <h2>Selling Price + OPEX</h2>
+        <p>Use COGS, gross profit, and operating cost inputs to plan both pricing and breakeven.</p>
       </div>
     </header>
 
@@ -82,6 +82,99 @@
 
             <div class="note-card" id="calculation-note">
               This selling price is calculated so your gross profit matches the percentage you selected.
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="calculator-card" aria-labelledby="opex-title">
+        <div class="section-heading">
+          <p class="section-kicker">Section 02</p>
+          <h2 id="opex-title">OPEX Calculation</h2>
+          <p>
+            Fill in your monthly operating expenses and food cost percentage to estimate your breakeven point.
+          </p>
+        </div>
+
+        <div class="calculator-layout">
+          <form class="calculator-form" id="opex-form">
+            <div class="form-subtitle">Field 1: Operating Expenses</div>
+
+            <label for="rental">Rental <span class="hint">(8%-12%)</span></label>
+            <div class="input-wrap">
+              <span class="prefix">RM</span>
+              <input id="rental" name="rental" type="number" min="0" step="0.01" value="0">
+            </div>
+
+            <label for="salary">Salary <span class="hint">(18%-25%)</span></label>
+            <div class="input-wrap">
+              <span class="prefix">RM</span>
+              <input id="salary" name="salary" type="number" min="0" step="0.01" value="0">
+            </div>
+
+            <label for="water-bill">Water Bill</label>
+            <div class="input-wrap">
+              <span class="prefix">RM</span>
+              <input id="water-bill" name="water-bill" type="number" min="0" step="0.01" value="0">
+            </div>
+
+            <label for="electrical-bill">Electrical Bill</label>
+            <div class="input-wrap">
+              <span class="prefix">RM</span>
+              <input id="electrical-bill" name="electrical-bill" type="number" min="0" step="0.01" value="0">
+            </div>
+
+            <label for="delivery-charge">Delivery Platform Commission Charge <span class="hint">(33%)</span></label>
+            <div class="input-wrap">
+              <span class="prefix">RM</span>
+              <input id="delivery-charge" name="delivery-charge" type="number" min="0" step="0.01" value="0">
+            </div>
+
+            <label for="miscellaneous">Miscellaneous <span class="hint">(Gas/Internet/Etc) (2%-3%)</span></label>
+            <div class="input-wrap">
+              <span class="prefix">RM</span>
+              <input id="miscellaneous" name="miscellaneous" type="number" min="0" step="0.01" value="0">
+            </div>
+
+            <div class="form-subtitle">Field 2: Food Cost</div>
+
+            <label for="food-cost">Food Cost</label>
+            <div class="input-wrap">
+              <input id="food-cost" name="food-cost" type="number" min="0" max="99.99" step="0.01" value="35">
+              <span class="suffix">%</span>
+            </div>
+          </form>
+
+          <aside class="results-panel" aria-live="polite">
+            <div class="result-card accent">
+              <p class="result-label">OPEX</p>
+              <p class="result-value" id="opex-total">RM0.00</p>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card">
+                <p class="result-label">Breakeven Point</p>
+                <p class="result-value small" id="breakeven-point">RM0.00</p>
+              </div>
+
+              <div class="result-card">
+                <p class="result-label">Food Cost</p>
+                <p class="result-value small" id="food-cost-display">35.00%</p>
+              </div>
+
+              <div class="result-card">
+                <p class="result-label">Breakeven Meal Sales / Month</p>
+                <p class="result-value small" id="breakeven-meals-month">0.00</p>
+              </div>
+
+              <div class="result-card">
+                <p class="result-label">Breakeven Set of Meal / Day</p>
+                <p class="result-value small" id="breakeven-meals-day">0.00</p>
+              </div>
+            </div>
+
+            <div class="note-card" id="opex-note">
+              OPEX is the total of your operating expenses, and breakeven is calculated by dividing OPEX by 1 minus food cost.
             </div>
           </aside>
         </div>
